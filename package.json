@@ -1,5 +1,5 @@
 {
-  "name": "mailifica-js",
+  "name": "@mailifica/mailifica-js",
   "version": "1.0.0",
   "description": "Official TypeScript & Node.js SDK for Mailifica Email Infrastructure",
   "main": "./dist/index.js",

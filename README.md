@@ -1,4 +1,4 @@
-# Mailifica Node.js & TypeScript SDK (`mailifica-js`)
+# Mailifica Node.js & TypeScript SDK (`@mailifica/mailifica-js`)
 
 > SDK oficial em **TypeScript nativo com 100% de tipagem estrita**, suporte a **React Email** (`react: <EmailTemplate />`), CommonJS, ESM e drop-in replacement para o pacote `resend`.
 
@@ -8,16 +8,16 @@
 
 ```bash
 # npm
-npm install mailifica-js
+npm install @mailifica/mailifica-js
 
 # pnpm
-pnpm add mailifica-js
+pnpm add @mailifica/mailifica-js
 
 # yarn
-yarn add mailifica-js
+yarn add @mailifica/mailifica-js
 
 # bun
-bun add mailifica-js
+bun add @mailifica/mailifica-js
 ```
 
 ---
@@ -27,8 +27,8 @@ bun add mailifica-js
 ### 1. Inicialização
 
 ```typescript
-import { Mailifica } from 'mailifica-js';
-// ou: import { mailifica } from 'mailifica-js';
+import { Mailifica } from '@mailifica/mailifica-js';
+// ou: import { mailifica } from '@mailifica/mailifica-js';
 
 const client = new Mailifica('ma_sua_chave_aqui');
 // ou configure a variável de ambiente MAILIFICA_API_KEY
