@@ -1,6 +1,6 @@
 {
   "name": "@mailifica/mailifica-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official TypeScript & Node.js SDK for Mailifica Email Infrastructure",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -13,7 +13,9 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsup",
@@ -41,11 +43,11 @@
       "optional": true
     }
   },
-  "author": "Mailifica Inc.",
+  "author": "Mailifica Inc. <dev@mailifica.com> (https://mailifica.com)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mailifica/mailifica-js.git"
+    "url": "https://github.com/mailifica/mailifica-js.git"
   },
   "homepage": "https://mailifica.com",
   "bugs": {
@@ -63,4 +65,3 @@
     "vitest": "^1.6.0"
   }
 }
-
