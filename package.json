@@ -43,6 +43,17 @@
   },
   "author": "Mailifica Inc.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mailifica/mailifica-js.git"
+  },
+  "homepage": "https://mailifica.com",
+  "bugs": {
+    "url": "https://github.com/mailifica/mailifica-js/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/node": "^20.12.0",
     "@types/react": "^18.3.0",
@@ -52,3 +63,4 @@
     "vitest": "^1.6.0"
   }
 }
+
