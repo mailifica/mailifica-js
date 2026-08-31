@@ -11,10 +11,14 @@ export class Emails {
    * Dispara um e-mail transacional
    */
   async send(payload: CreateEmailOptions): Promise<MailificaResponse<CreateEmailResponse>> {
-    const to = Array.isArray(payload.to) ? payload.to : [payload.to];
+    const to = Array.isArray(payload.to)
+      ? (payload.to.length === 1 ? payload.to[0] : payload.to[0])
+      : payload.to;
     const cc = payload.cc ? (Array.isArray(payload.cc) ? payload.cc : [payload.cc]) : undefined;
     const bcc = payload.bcc ? (Array.isArray(payload.bcc) ? payload.bcc : [payload.bcc]) : undefined;
-    const replyTo = payload.reply_to || payload.replyTo;
+    const replyTo = Array.isArray(payload.reply_to || payload.replyTo)
+      ? (payload.reply_to || payload.replyTo)?.[0]
+      : (payload.reply_to || payload.replyTo);
 
     let html = payload.html;
 
@@ -22,7 +26,7 @@ export class Emails {
       html = await renderReactEmail(payload.react);
     }
 
-    const { react: _, ...cleanPayload } = payload as any;
+    const { react: _, replyTo: __, ...cleanPayload } = payload as any;
 
     return this.client.post<CreateEmailResponse>('/emails', {
       ...cleanPayload,
